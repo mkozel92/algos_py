@@ -1,7 +1,7 @@
 from typing import Any
 
 
-class LinkedListStack(object):
+class LinkedListQueue(object):
     """
     A Stack implemented using a Linked list
     """
@@ -14,27 +14,25 @@ class LinkedListStack(object):
 
     def __init__(self):
         self.first = None
+        self.last = None
 
-    def push(self, data: Any):
+    def enqueue(self, data: Any):
         """
-        pushes data on the top of the stack
+        enqueue data to the beginning of the queue
         complexity O(1)
-        :param data: data to push
+        :param data: data to enqueue
         """
-        tmp = self.first
-        self.first = self.Node(data)
-        self.first.next = tmp
+        new_node = self.Node(data)
+        if self.is_empty():
+            self.first = new_node
+            self.last = new_node
+        else:
+            self.last.next = new_node
+            self.last = self.last.next
 
-    def peek(self) -> Any:
+    def dequeue(self) -> Any:
         """
-        return data from top of the stack without removing the top node
-        :return: data from the top node
-        """
-        return self.first.data
-
-    def pop(self) -> Any:
-        """
-        removes top node and returns its data
+        removes first node and returns its data
         complexity O(1)
         :return: data from to top node
         """
@@ -42,16 +40,15 @@ class LinkedListStack(object):
             data = self.first.data
             self.first = self.first.next
             return data
-        else:
-            return None
+        return None
 
     def is_empty(self):
         """
-        :return: True if the Stack is empty
+        :return: True if the Queue is empty
         """
         return self.first is None
 
-    def print_stack(self):
+    def print_queue(self):
         node = self.first
         while node:
             print(node.data)
