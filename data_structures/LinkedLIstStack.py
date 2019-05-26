@@ -14,6 +14,19 @@ class LinkedListStack(object):
 
     def __init__(self):
         self.first = None
+        self.current = None
+
+    def __iter__(self):
+        self.current = self.first
+        return self
+
+    def __next__(self):
+        if self.current:
+            data = self.current.data
+            self.current = self.current.next
+            return data
+        else:
+            raise StopIteration
 
     def push(self, data: Any):
         """

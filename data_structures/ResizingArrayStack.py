@@ -6,6 +6,19 @@ class ResizingArrayStack(object):
     def __init__(self):
         self.stack = [None]
         self.head = 0
+        self.current = 0
+
+    def __iter__(self):
+        self.current = 0
+        return self
+
+    def __next__(self):
+        if self.current < self.head:
+            data = self.stack[self.current]
+            self.current += 1
+            return data
+        else:
+            raise StopIteration
 
     def push(self, data: Any):
         """
