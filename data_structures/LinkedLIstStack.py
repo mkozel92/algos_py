@@ -18,6 +18,7 @@ class LinkedListStack(object):
     def push(self, data: Any):
         """
         pushes data on the top of the stack
+        complexity O(1)
         :param data: data to push
         """
         tmp = self.first
@@ -34,6 +35,7 @@ class LinkedListStack(object):
     def pop(self) -> Any:
         """
         removes top node and returns its data
+        complexity O(1)
         :return: data from to top node
         """
         data = self.first.data
