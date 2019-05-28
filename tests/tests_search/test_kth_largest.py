@@ -1,6 +1,6 @@
 import unittest
 
-from misc.kth_largest import quick_find
+from search.kth_largest import quick_find
 
 
 class TestKthLargest(unittest.TestCase):

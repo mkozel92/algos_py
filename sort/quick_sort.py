@@ -15,7 +15,7 @@ def partition(a_list: list, low: int, hi: int) -> int:
     i = low + 1
     j = hi
 
-    while True:
+    while i <= j:
 
         while less(a_list[low], a_list[j]):
             j -= 1
