@@ -11,5 +11,5 @@ def knuth_shuffle(a_list: list):
     :param a_list: list to shuffle
     """
     for i in range(len(a_list)):
-        j = randint(0, i + 1)
+        j = randint(0, i)
         swap(a_list, i, j)
