@@ -54,12 +54,9 @@ def iterative_sort(a_list: list, aux_list: list, low: int, hi: int):
     :param low: index from which to sort
     :param hi: index to which to sort
     """
-    if hi <= low:
-        return
-
     stride = 1
-    while stride <= len(a_list):
-        for i in range(0, len(a_list), 2*stride):
+    while stride <= hi - low:
+        for i in range(low, hi, 2*stride):
             merge(a_list, aux_list, i, i + stride - 1, min(i+2*stride-1, hi))
         stride *= 2
 
