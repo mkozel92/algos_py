@@ -1,7 +1,7 @@
 import unittest
 from random import shuffle
 
-from data_structures.BinaryHeap import MinHeap
+from data_structures.binary_heap import MinHeap
 
 
 class TestBinaryHeap(unittest.TestCase):
