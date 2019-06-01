@@ -70,7 +70,7 @@ class RedBlackTree(object):
     def put(self, k: Any, v: Any):
         """
         adds new node to the tree
-        complexity 0(log N) as the tree is guatanteed to be balanced
+        complexity 0(log N) as the tree is guaranteed to be balanced
         :param k: key to insert
         :param v: value to insert
         """
