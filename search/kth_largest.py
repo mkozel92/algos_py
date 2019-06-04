@@ -23,9 +23,9 @@ def quick_find(a_list: list, k: int) -> Any:
     while low <= hi:
         j = partition(a_list, low, hi)
         if j > k:
-            hi = max(j-1, 0)
+            hi = j-1
         elif j < k:
-            low = min(j+1, hi)
+            low = j+1
         else:
             return a_list[k]
     return a_list[k]
