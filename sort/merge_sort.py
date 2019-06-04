@@ -21,7 +21,9 @@ def merge(a_list: list, aux_list: list, low: int, mid: int, hi: int):
         if i > mid or (j <= hi and less(aux_list[j], aux_list[i])):
             a_list[k] = aux_list[j]
             j += 1
-        elif j > hi or (i <= mid and not less(aux_list[j], aux_list[i])):
+        else:
+            # this is implicit
+            # if  j > hi or (i <= mid and not less(aux_list[j], aux_list[i])):
             a_list[k] = aux_list[i]
             i += 1
         k += 1
