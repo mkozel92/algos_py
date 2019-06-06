@@ -9,7 +9,7 @@ class ALGraph(object):
         :param num_v:  num of vertices in the graph
         """
         self.v = num_v
-        self.data = [set()] * self.v
+        self.data = [set() for _ in range(self.v)]
 
     def add_edge(self, p: int, q: int):
         """
