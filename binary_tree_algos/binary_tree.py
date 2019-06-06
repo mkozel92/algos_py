@@ -21,6 +21,7 @@ class BinaryTree(object):
             self.count = 1
             self.left = None
             self.right = None
+            self.next = None
 
     def __init__(self):
         """

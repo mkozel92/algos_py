@@ -55,6 +55,17 @@ class LinkedListQueue(object):
             return data
         return None
 
+    def peek(self) -> Any:
+        """
+        returns data from top node
+        complexity O(1)
+        :return: data from to top node
+        """
+        if not self.is_empty():
+            data = self.first.data
+            return data
+        return None
+
     def is_empty(self):
         """
         :return: True if the Queue is empty
