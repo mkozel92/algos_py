@@ -1,4 +1,6 @@
 from typing import Any, Union
+
+from data_structures.data_structure_interfaces import Queue
 from data_structures.linked_list_queue import LinkedListQueue
 
 
@@ -94,7 +96,7 @@ class BSTSymbolTable(object):
         self.recursive_inorder(self.root, queue)
         return queue.__iter__()
 
-    def recursive_inorder(self, node: Node, queue: LinkedListQueue):
+    def recursive_inorder(self, node: Node, queue: Queue):
         """
         recursive implementation of inorder traversal
         complexity O(N) + N extra space for the queue

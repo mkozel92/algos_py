@@ -1,7 +1,9 @@
 from typing import Any
 
+from data_structures.data_structure_interfaces import Queue
 
-class LinkedListQueue(object):
+
+class LinkedListQueue(Queue):
     """
     A Stack implemented using a Linked list
     """

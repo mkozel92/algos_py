@@ -1,13 +1,13 @@
-from graphs.adjacency_list_graph import ALGraph
+from graphs.graph_interface import Graph
 
 
 class ConnectedComponents(object):
     """class to compute connected components of given graph"""
 
-    def __init__(self, g: ALGraph):
+    def __init__(self, g: Graph):
         """
         init with a graph
-        :param g: ALGraph
+        :param g: Graph
         """
         self.g = g
         self.visited = [False] * self.g.v

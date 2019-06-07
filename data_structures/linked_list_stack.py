@@ -1,7 +1,9 @@
 from typing import Any
 
+from data_structures.data_structure_interfaces import Stack
 
-class LinkedListStack(object):
+
+class LinkedListStack(Stack):
     """
     A Stack implemented using a Linked list
     """

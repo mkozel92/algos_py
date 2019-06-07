@@ -1,7 +1,9 @@
 from typing import Any
 
+from data_structures.data_structure_interfaces import Stack
 
-class ResizingArrayStack(object):
+
+class ResizingArrayStack(Stack):
     """Stack implemented using resizing array"""
     def __init__(self):
         self.stack = [None]
@@ -19,6 +21,13 @@ class ResizingArrayStack(object):
             return data
         else:
             raise StopIteration
+
+    def is_empty(self) -> bool:
+        """
+        check if stack is empty
+        :return: True if stack is empty
+        """
+        return self.head == 0
 
     def push(self, data: Any):
         """

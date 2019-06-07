@@ -1,6 +1,7 @@
+from graphs.graph_interface import Graph
 
 
-class ALGraph(object):
+class ALGraph(Graph):
     """graph represented by adjacency list"""
 
     def __init__(self, num_v):

@@ -1,7 +1,8 @@
 from typing import Iterable
+from graphs.graph_interface import Graph
 
 
-class AMGraph(object):
+class AMGraph(Graph):
     """graph represented by adjacency matrix"""
 
     def __init__(self, num_v: int):
@@ -33,8 +34,8 @@ class AMGraph(object):
         :return: set of vertices adjacent to v
         """
         assert (v < self.v)
-        adjacent_verices = set()
+        adjacent_vertices = set()
         for i in range(self.v):
             if self.graph[v][i] == 1:
-                adjacent_verices.add(i)
-        return adjacent_verices
+                adjacent_vertices.add(i)
+        return adjacent_vertices

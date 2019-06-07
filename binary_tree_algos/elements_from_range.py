@@ -1,9 +1,9 @@
 from binary_tree_algos.binary_tree import BinaryTree
-from data_structures.linked_list_queue import LinkedListQueue
+from data_structures.data_structure_interfaces import Queue
 from typing import Any
 
 
-def get_elements_from_range(node: BinaryTree.Node, q: LinkedListQueue, low: Any, hi: Any):
+def get_elements_from_range(node: BinaryTree.Node, q: Queue, low: Any, hi: Any):
     """
     enqueues elements of a tree from given range
     complexity O(M + log N)

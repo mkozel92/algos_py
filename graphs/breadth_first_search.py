@@ -1,7 +1,8 @@
 from data_structures.linked_list_queue import LinkedListQueue
+from graphs.graph_interface import Graph
 
 
-def bfs_iterative(g: ALGraph, v: int, visited: list, visited_from: list):
+def bfs_iterative(g: Graph, v: int, visited: list, visited_from: list):
     """
     iterative bfs implementation
     complexity O(E + V)

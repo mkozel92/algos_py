@@ -1,8 +1,8 @@
 from data_structures.linked_list_stack import LinkedListStack
-from graphs.adjacency_list_graph import ALGraph
+from graphs.graph_interface import Graph
 
 
-def dfs_recursive(g: ALGraph, v: int, visited: list, visited_from: list, from_: int):
+def dfs_recursive(g: Graph, v: int, visited: list, visited_from: list, from_: int):
     """
     recursive dfs implementation
     complexity O(E + V)
@@ -20,7 +20,7 @@ def dfs_recursive(g: ALGraph, v: int, visited: list, visited_from: list, from_: 
         dfs_recursive(g, vertex, visited, visited_from, v)
 
 
-def dfs_iterative(g: ALGraph, v: int, visited: list, visited_from: list):
+def dfs_iterative(g: Graph, v: int, visited: list, visited_from: list):
     """
     iterative dfs implementation
     complexity O(E + V)
