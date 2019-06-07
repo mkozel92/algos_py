@@ -33,3 +33,9 @@ class ALDigraph(Digraph):
         """
         assert (p < self.v)
         return self.data[p]
+
+    def get_size(self):
+        """
+        :return: number of vertices in the graph
+        """
+        return self.v

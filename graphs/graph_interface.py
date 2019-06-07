@@ -21,6 +21,12 @@ class Graph(ABC):
         """
         pass
 
+    def get_size(self):
+        """
+        return number of vertices in the graph
+        """
+        pass
+
 
 class Digraph(ABC):
     """interface for directed graph"""
@@ -39,5 +45,11 @@ class Digraph(ABC):
         add new edge connecting given vertices
         :param v_1: first vertex
         :param v_2: second vertex
+        """
+        pass
+
+    def get_size(self):
+        """
+        return number of vertices in the graph
         """
         pass

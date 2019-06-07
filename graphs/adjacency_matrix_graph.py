@@ -39,3 +39,9 @@ class AMGraph(Graph):
             if self.graph[v][i] == 1:
                 adjacent_vertices.add(i)
         return adjacent_vertices
+
+    def get_size(self):
+        """
+        :return: number of vertices in the graph
+        """
+        return self.v
