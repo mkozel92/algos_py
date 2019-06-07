@@ -39,3 +39,18 @@ class ALDigraph(Digraph):
         :return: number of vertices in the graph
         """
         return self.v
+
+    def reverse(self) -> Digraph:
+        """
+        :return: graph with reversed edges
+        """
+        new_graph = ALDigraph(self.get_size())
+        for i in range(self.get_size()):
+            for j in self.adj(i):
+                new_graph.add_edge(j, i)
+        return new_graph
+
+
+
+
+

@@ -53,3 +53,9 @@ class Digraph(ABC):
         return number of vertices in the graph
         """
         pass
+
+    def reverse(self) -> 'Digraph':
+        """
+        return a digraph with reversed edges
+        """
+        pass
