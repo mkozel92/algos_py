@@ -1,3 +1,4 @@
+from graphs.edge import Edge
 from graphs.graph_interface import WeightedGraph
 
 
@@ -10,7 +11,8 @@ class ALWGraph(WeightedGraph):
         :param num_v:  num of vertices in the graph
         """
         self.v = num_v
-        self.data = [set() for _ in range(self.v)]
+        self.edges = list()
+        self.data = [list() for _ in range(self.v)]
 
     def add_edge(self, v_1: int, v_2: int, weight: float):
         """
@@ -24,8 +26,9 @@ class ALWGraph(WeightedGraph):
         assert (0 <= v_2 < self.v)
 
         e = Edge(v_1, v_2, weight)
-        self.data[v_1].add(e)
-        self.data[v_2].add(e)
+        self.data[v_1].append(e)
+        self.data[v_2].append(e)
+        self.edges.append(e)
 
     def adj(self, v_1: int) -> set:
         """
@@ -42,3 +45,9 @@ class ALWGraph(WeightedGraph):
         :return: number of vertices in the graph
         """
         return self.v
+
+    def get_edges(self) -> list:
+        """
+        :return: set of all edges in the graph
+        """
+        return self.edges

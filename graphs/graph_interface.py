@@ -87,3 +87,9 @@ class WeightedGraph(ABC):
         return number of vertices in the graph
         """
         pass
+
+    def get_edges(self) -> set:
+        """
+        return set of all the edges in the graph
+        """
+        pass
