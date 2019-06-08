@@ -30,15 +30,15 @@ class ALWGraph(WeightedGraph):
         self.data[v_2].append(e)
         self.edges.append(e)
 
-    def adj(self, v_1: int) -> set:
+    def adj(self, v_1: int) -> list:
         """
-        return set of vertices adjacent to v_1
-        complexity O(N)
+        return set of edges adjacent to v_1
+        complexity O(1)
         :param v_1: a vertex
         :return: set of vertices adjacent to v_1
         """
         assert (0 <= v_1 < self.v)
-        return set([e.other(v_1) for e in self.data[v_1]])
+        return self.data[v_1]
 
     def get_size(self):
         """
