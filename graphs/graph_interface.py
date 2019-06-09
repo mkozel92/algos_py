@@ -93,3 +93,37 @@ class WeightedGraph(ABC):
         return set of all the edges in the graph
         """
         pass
+
+
+class WeightedDigraph(ABC):
+    """interface for weighted digraph"""
+
+    @abstractmethod
+    def adj(self, v: int) -> set:
+        """
+        return set of adjacent vertices to a given vertex
+        :param v: a vertex
+        """
+        pass
+
+    @abstractmethod
+    def add_edge(self, v_1: int, v_2: int, weight: float):
+        """
+        add new edge connecting given vertices
+        :param v_1: first vertex
+        :param v_2: second vertex
+        :param weight: weight of the edge
+        """
+        pass
+
+    def get_size(self):
+        """
+        return number of vertices in the graph
+        """
+        pass
+
+    def get_edges(self) -> set:
+        """
+        return set of all the edges in the graph
+        """
+        pass

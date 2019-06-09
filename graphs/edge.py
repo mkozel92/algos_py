@@ -48,3 +48,45 @@ class Edge(object):
 
     def __ne__(self, other: 'Edge'):
         return self.weight != other.weight
+
+
+class DirectedEdge(object):
+    """implementation of weighted graph directed edge"""
+
+    def __init__(self, from_: int, to_: int, weight: float):
+        """
+        initialize edge with adjacent vertices and weight
+        :param from_: first vertex
+        :param to_: second vertex
+        :param weight: weight of edge
+        """
+        self.from_ = from_
+        self.to_ = to_
+        self.weight = weight
+
+    def from_vertex(self) -> int:
+        """
+        :return: from vertex adjacent to this edge
+        """
+        return self.from_
+
+    def to_vertex(self) -> int:
+        return self.to_
+
+    def __lt__(self, other: 'Edge'):
+        return self.weight < other.weight
+
+    def __le__(self, other: 'Edge'):
+        return self.weight <= other.weight
+
+    def __gt__(self, other: 'Edge'):
+        return self.weight > other.weight
+
+    def __ge__(self, other: 'Edge'):
+        return self.weight >= other.weight
+
+    def __eq__(self, other: 'Edge'):
+        return self.weight == other.weight
+
+    def __ne__(self, other: 'Edge'):
+        return self.weight != other.weight
