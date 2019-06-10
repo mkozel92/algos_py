@@ -4,22 +4,23 @@ from sort.sort_utils import swap
 CAPACITY = 100
 
 
-class MinHeap(object):
-    """ implementation of min Binary heap with fixed capacity"""
+class BinaryHeap(object):
+    """ implementation of a Binary heap with fixed capacity"""
 
-    def __init__(self):
+    def __init__(self, compare=lambda a, b: a < b):
         """
         initialize heap with a list of Nones and set current size to 0
         """
         self.data = [None] * CAPACITY
         self.current_size = 0
+        self.compare = compare
 
     def swim(self, index: int):
         """
         swim element at the given index to fix heap order
         :param index: index of element to swim
         """
-        while index > 1 and self.data[index] < self.data[index//2]:
+        while index > 1 and self.compare(self.data[index], self.data[index//2]):
             swap(self.data, index, index // 2)
             index //= 2
 
@@ -30,15 +31,15 @@ class MinHeap(object):
         """
         while 2*index <= self.current_size:
             if self.current_size < 2*index + 1:
-                smaller_child = 2 * index
-            elif self.data[2*index] < self.data[2*index+1]:
-                smaller_child = 2 * index
+                _child = 2 * index
+            elif self.compare(self.data[2*index], self.data[2*index+1]):
+                _child = 2 * index
             else:
-                smaller_child = 2 * index + 1
+                _child = 2 * index + 1
 
-            if self.data[smaller_child] < self.data[index]:
-                swap(self.data, smaller_child, index)
-                index = smaller_child
+            if self.compare(self.data[_child], self.data[index]):
+                swap(self.data, _child, index)
+                index = _child
             else:
                 break
 

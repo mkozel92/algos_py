@@ -1,8 +1,8 @@
-from data_structures.binary_heap import MinHeap
+from data_structures.binary_heap import BinaryHeap
 from graphs.graph_interface import WeightedGraph
 
 
-def visit(v: int, mh: MinHeap, a_graph: WeightedGraph, visited: list):
+def visit(v: int, mh: BinaryHeap, a_graph: WeightedGraph, visited: list):
     """
     visit a vertex as a helper function for Prim's algo
     :param v: a vertex
@@ -28,7 +28,7 @@ def prim(a_graph: WeightedGraph) -> list:
     """
     visited = [False] * a_graph.get_size()
     mst = list()
-    mh = MinHeap()
+    mh = BinaryHeap()
 
     visit(0, mh, a_graph, visited)
 

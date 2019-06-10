@@ -1,13 +1,13 @@
 import unittest
-from random import shuffle
 
-from data_structures.binary_heap import MinHeap
+from random import shuffle
+from data_structures.binary_heap import BinaryHeap
 
 
 class TestBinaryHeap(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.bh = MinHeap()
+        self.bh = BinaryHeap()
         a_list = list(range(50))
         shuffle(a_list)
         for i in a_list:

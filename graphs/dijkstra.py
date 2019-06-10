@@ -1,9 +1,9 @@
-from data_structures.binary_heap import MinHeap
+from data_structures.binary_heap import BinaryHeap
 from graphs.edge import DirectedEdge
 from graphs.graph_interface import WeightedDigraph
 
 
-def relax(edge: DirectedEdge, mh: MinHeap, distances: list, edge_to: list):
+def relax(edge: DirectedEdge, mh: BinaryHeap, distances: list, edge_to: list):
     """
     relax edge of a graph -> update distance to a vertex if we found shorter path
     save this path to edge_from list
@@ -17,8 +17,8 @@ def relax(edge: DirectedEdge, mh: MinHeap, distances: list, edge_to: list):
     if distances[from_] + edge.weight < distances[to_]:
         distances[to_] = distances[from_] + edge.weight
         edge_to[to_] = edge
-
-    mh.insert((distances[to_], to_))
+        # TODO: update mh if same key is inserted
+        mh.insert((distances[to_], to_))
 
 
 def dijkstra(a_graph: WeightedDigraph, distances: list, edge_to: list):
@@ -30,7 +30,7 @@ def dijkstra(a_graph: WeightedDigraph, distances: list, edge_to: list):
     :param distances: distances to all vertices
     :param edge_to: paths to all vertices
     """
-    mh = MinHeap()
+    mh = BinaryHeap()
     mh.insert((0, 0))
 
     while not mh.is_empty():
