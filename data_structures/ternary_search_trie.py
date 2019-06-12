@@ -15,43 +15,34 @@ class TernarySearchTrie(object):
     def __init__(self):
         self.root = None
 
-    def recursive_put(self, node: Union[Node, None], key: str, value: Any):
+    def recursive_put(self, node: Union[Node, None], key: str, value: Any, d: int):
+        c = key[d]
         if node is None:
             node = self.Node()
-            node.key = key[0]
-            if len(key) == 1:
-                node.value = value
-                return node
-            else:
-                node.middle = self.recursive_put(None, key[1:], value)
-                return node
-        elif key[0] == node.key:
-            key = key[1:]
-            if not key:
-                node.value = value
-                return node
-
-        if node.middle and node.middle.key == key[0]:
-            node.middle = self.recursive_put(node.middle, key, value)
-        elif key[0] < node.key:
-            node.left = self.recursive_put(node.left, key, value)
+            node.key = c
+        if c < node.key:
+            node.left = self.recursive_put(node.left, key, value, d)
+        elif c > node.key:
+            node.right = self.recursive_put(node.right, key, value, d)
+        elif d < len(key) - 1:
+            node.middle = self.recursive_put(node.middle, key, value, d + 1)
         else:
-            node.right = self.recursive_put(node.right, key, value)
+            node.value = value
         return node
 
     def put(self, key: str, value: Any):
-        self.root = self.recursive_put(self.root, key, value)
+        self.root = self.recursive_put(self.root, key, value, 0)
 
     def get(self, key: str) -> Any:
         current = self.root
+        d = 0
         while current is not None:
-            if current.key == key[0]:
-                key = key[1:]
-            if not key:
-                return current.value
-            if current.middle and current.middle.key == key[0]:
+            if current.key == key[d]:
+                d += 1
+                if d >= len(key):
+                    return current.value
                 current = current.middle
-            elif key[0] < current.key:
+            elif key[d] < current.key:
                 current = current.left
             else:
                 current = current.right
