@@ -54,4 +54,3 @@ def expand(bit_stream: BitStream) -> BitStream:
             expanded.write(bit, bool)
         bit = not bit
     return expanded
-

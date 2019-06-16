@@ -12,6 +12,7 @@ class BSTSymbolTable(object):
            count specifies size of this subtree
            and left and right point to the respective subtrees
         """
+
         def __init__(self, key: Any, data: Any):
             """
             initializes a Node

@@ -55,4 +55,3 @@ def count_higher(node: BinaryTree.Node, key: Any) -> int:
         return count_higher(node.right, key)
     else:
         return tree_size(node.right)
-

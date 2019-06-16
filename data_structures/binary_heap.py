@@ -20,7 +20,7 @@ class BinaryHeap(object):
         swim element at the given index to fix heap order
         :param index: index of element to swim
         """
-        while index > 1 and self.compare(self.data[index], self.data[index//2]):
+        while index > 1 and self.compare(self.data[index], self.data[index // 2]):
             swap(self.data, index, index // 2)
             index //= 2
 
@@ -29,10 +29,10 @@ class BinaryHeap(object):
         sink element at the given index to fix heap order
         :param index: index of element to sink
         """
-        while 2*index <= self.current_size:
-            if self.current_size < 2*index + 1:
+        while 2 * index <= self.current_size:
+            if self.current_size < 2 * index + 1:
                 _child = 2 * index
-            elif self.compare(self.data[2*index], self.data[2*index+1]):
+            elif self.compare(self.data[2 * index], self.data[2 * index + 1]):
                 _child = 2 * index
             else:
                 _child = 2 * index + 1
