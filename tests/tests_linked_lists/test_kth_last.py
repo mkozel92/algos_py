@@ -1,6 +1,6 @@
 import unittest
 
-from linked_lists.find_kth_last import find_kth_last
+from linked_lists.find_kth_last import find_kth_last, find_kth_last_recursive
 from linked_lists.linked_list import LinkedList
 
 
@@ -16,3 +16,10 @@ class TestKthLast(unittest.TestCase):
         self.assertEqual(find_kth_last(self.original_list, 2), 7)
         self.assertEqual(find_kth_last(self.original_list, 3), 6)
         self.assertEqual(find_kth_last(self.original_list, 20), None)
+
+    def test_remove_duplicates_recursive(self):
+        self.assertEqual(find_kth_last_recursive(self.original_list, 0), 9)
+        self.assertEqual(find_kth_last_recursive(self.original_list, 1), 8)
+        self.assertEqual(find_kth_last_recursive(self.original_list, 2), 7)
+        self.assertEqual(find_kth_last_recursive(self.original_list, 3), 6)
+        self.assertEqual(find_kth_last_recursive(self.original_list, 20), None)
