@@ -33,4 +33,3 @@ def rotate_in_place(a_matrix: list):
             a_matrix[last - offset][first] = a_matrix[last][last - offset]
             a_matrix[last][last - offset] = a_matrix[j][last]
             a_matrix[j][last] = top
-
