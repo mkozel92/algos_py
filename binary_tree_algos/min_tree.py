@@ -1,7 +1,7 @@
 from binary_tree_algos.binary_tree import BinaryTree
 
 
-def add_to_tree(a_list: list, from_: int, to_: int, a_tree: BinaryTree):
+def add_to_tree(a_list: list, from_: int, to_: int):
     """
     recursively build tree
     keep the tree balanced by adding elements from the middle of given lists
@@ -11,23 +11,25 @@ def add_to_tree(a_list: list, from_: int, to_: int, a_tree: BinaryTree):
     :param a_tree: tree to build
     """
     if from_ > to_:
-        return
+        return None
 
     mid = (from_ + to_) // 2
-    a_tree.put(a_list[mid], '')
+    a_node = BinaryTree.Node(a_list[mid], "")
 
-    add_to_tree(a_list, from_, mid - 1, a_tree)
-    add_to_tree(a_list, mid + 1, to_, a_tree)
+    a_node.left = add_to_tree(a_list, from_, mid - 1)
+    a_node.right = add_to_tree(a_list, mid + 1, to_)
+    return a_node
 
 
 def min_tree(a_list: list) -> BinaryTree:
     """
     build tree of minimal height given a list of elements
+    complexity O(N)
     :param a_list: a list to build tree from
     :return: binary tree
     """
     a_list.sort()
     bt = BinaryTree()
-    add_to_tree(a_list, 0, len(a_list) - 1, bt)
+    bt.root = add_to_tree(a_list, 0, len(a_list) - 1)
     return bt
 
