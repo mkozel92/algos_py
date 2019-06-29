@@ -45,7 +45,9 @@ class LinkedListStack(Stack):
         return data from top of the stack without removing the top node
         :return: data from the top node
         """
-        return self.first.data
+        if self.first is not None:
+            return self.first.data
+        return None
 
     def pop(self) -> Any:
         """
