@@ -2,6 +2,8 @@
 
 Implementation of common algorithms and data structures in python
 
+#### contents
+* [Binary tree algos](#binary-tree-algos)
 
 #### Binary tree algos
 
