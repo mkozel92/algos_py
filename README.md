@@ -4,27 +4,24 @@ Implementation of common algorithms and data structures in python
 
 #### contents
 * [Binary tree algos](#binary-tree-algos)
+* [Data structures](#data-structures)
 
 #### Binary tree algos
 
-##### 1. binary_tree
+1. _binary_tree_  
+  simple implementation of binary tree. \
+O(log N) insertion and O(log N search)
 
-simple implementation of binary tree. \
-O(log N) insertion and O(log N rearch)
-
-##### 2. connect_same_level
-
-Algo to connect tree nodes that are on the same level in the tree. \
+1. _connect_same_level_
+  Algo to connect tree nodes that are on the same level in the tree. \
 Uses DFS and has O(N) complexity
 
-##### 3. count_from_range
-
+1. _count_from_range_
 function to count elements of tree that are lower than given element, higher then given elemtnt \
 of fall in given rage. All are recursive algos with O(log N) complexity.
 This algos assume that each node keep size of its subtree
 
-##### 4. elements_from_range
-
+1. elements_from_range
 enqueues elemnts that fall in specified range with O(M + log N) complexity
 
 #### data structures
