@@ -6,9 +6,12 @@ Implementation of common algorithms and data structures in python
 * [Binary tree algos](#binary-tree-algos)
   * _binary_tree_
   * _bst_sequences_
+  * _common_ancestor_
   * _connect_same_level_
   * _count_from_range_
   * _elements_from_range_
+  * _is_balanced_
+  * _is_bst_
 * [Data structures](#data-structures)
 
 #### Binary tree algos
@@ -21,6 +24,10 @@ O(log N) insertion and O(log N search)
   Return all possible sequences that could have been used to construct given binary tree
   Complexity O(N!)
 
+1. _common_ancestor_  
+  Find earliest common ancestor in binary tree\
+  complexity O(N)
+
 1. _connect_same_level_  
   Algo to connect tree nodes that are on the same level in the tree. \
 Uses DFS and has O(N) complexity
@@ -32,6 +39,18 @@ This algos assume that each node keep size of its subtree
 
 1. _elements_from_range_  
 enqueues elemnts that fall in specified range with O(M + log N) complexity
+
+1. _is_balanced_  
+  checks if given tree is balances (no to subtrees have height difference bigger than 1)\
+  complexity O(N)
+  
+1. _is_bst_  
+  check if given tree is bst\
+  complexity O(N)
+
+1. _min_tree_  
+  build a tree of minimal height given a list of keys \
+  complexity O(N log N) 
 
 #### data structures
 
