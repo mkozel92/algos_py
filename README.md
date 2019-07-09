@@ -2,8 +2,13 @@
 
 Implementation of common algorithms and data structures in python
 
-#### contents
+#### Contents
 * [Binary tree algos](#binary-tree-algos)
+  * _binary_tree_
+  * _bst_sequences_
+  * _connect_same_level_
+  * _count_from_range_
+  * _elements_from_range_
 * [Data structures](#data-structures)
 
 #### Binary tree algos
@@ -11,6 +16,10 @@ Implementation of common algorithms and data structures in python
 1. _binary_tree_  
   simple implementation of binary tree. \
 O(log N) insertion and O(log N search)
+
+1. _bst_sequences_  
+  Return all possible sequences that could have been used to construct given binary tree
+  Complexity O(N!)
 
 1. _connect_same_level_  
   Algo to connect tree nodes that are on the same level in the tree. \
