@@ -71,3 +71,6 @@ class BinaryHeap(object):
         :return: True if the heap is empty
         """
         return self.current_size == 0
+
+    def size(self) -> int:
+        return self.current_size

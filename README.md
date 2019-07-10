@@ -20,6 +20,7 @@ Implementation of common algorithms and data structures in python
   * _longest_sequence_
 * [Compression](#compression)
   * _run_length_compression_
+  * _huffman_compression_
 * [Data structures](#data-structures)
 
 #### Binary tree algos
@@ -79,6 +80,10 @@ This algos assume that each node keep size of its subtree
 
 1. _run_length_compression_  
   compress data by encoding alternating sequences of same bits as a lengths of those sequences
+
+
+1. _huffman_compression_  
+  compress data using huffman encoding
 
 #### data structures
 
