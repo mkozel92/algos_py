@@ -63,6 +63,10 @@ This algos assume that each node keep size of its subtree
   
 1. _float_to_bin_  
   convert decimal part of given float into bit representation
+  
+1. _insert_  
+  insert bits of given int into another into between specified bits
+
 
 #### data structures
 
