@@ -13,6 +13,7 @@ Implementation of common algorithms and data structures in python
   * _is_balanced_
   * _is_bst_
   * _min_tree_
+* [Bit manipulation](#bit-manipulation)
 * [Data structures](#data-structures)
 
 #### Binary tree algos
@@ -39,7 +40,7 @@ of fall in given rage. All are recursive algos with O(log N) complexity.
 This algos assume that each node keep size of its subtree
 
 1. _elements_from_range_  
-enqueues elemnts that fall in specified range with O(M + log N) complexity
+  enqueues elements that fall in specified range with O(M + log N) complexity
 
 1. _is_balanced_  
   checks if given tree is balances (no to subtrees have height difference bigger than 1)\
@@ -52,6 +53,12 @@ enqueues elemnts that fall in specified range with O(M + log N) complexity
 1. _min_tree_  
   build a tree of minimal height given a list of keys \
   complexity O(N log N) 
+
+#### bit manipulation
+
+1. _convert_  
+  count how many bits need to be flipped to convert given integer into another integer
+  
 
 #### data structures
 
