@@ -14,6 +14,8 @@ Implementation of common algorithms and data structures in python
   * _is_bst_
   * _min_tree_
 * [Bit manipulation](#bit-manipulation)
+  * _convert_
+  * _float_to_bin_
 * [Data structures](#data-structures)
 
 #### Binary tree algos
@@ -59,6 +61,8 @@ This algos assume that each node keep size of its subtree
 1. _convert_  
   count how many bits need to be flipped to convert given integer into another integer
   
+1. _float_to_bin_  
+  convert decimal part of given float into bit representation
 
 #### data structures
 
