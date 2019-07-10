@@ -16,6 +16,10 @@ Implementation of common algorithms and data structures in python
 * [Bit manipulation](#bit-manipulation)
   * _convert_
   * _float_to_bin_
+  * _insert_
+  * _longest_sequence_
+* [Compression](#compression)
+  * _run_length_compression_
 * [Data structures](#data-structures)
 
 #### Binary tree algos
@@ -70,6 +74,11 @@ This algos assume that each node keep size of its subtree
 1. _longest_sequence_  
   return length of the longest sequence of 1 bits in given integer\
   that can be created by flipping one bit
+
+#### compression
+
+1. _run_length_compression_  
+  compress data by encoding alternating sequences of same bits as a lengths of those sequences
 
 #### data structures
 
