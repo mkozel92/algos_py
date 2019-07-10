@@ -12,6 +12,7 @@ Implementation of common algorithms and data structures in python
   * _elements_from_range_
   * _is_balanced_
   * _is_bst_
+  * _min_tree_
 * [Data structures](#data-structures)
 
 #### Binary tree algos
