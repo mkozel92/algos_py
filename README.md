@@ -67,6 +67,9 @@ This algos assume that each node keep size of its subtree
 1. _insert_  
   insert bits of given int into another into between specified bits
 
+1. _longest_sequence_  
+  return length of the longest sequence of 1 bits in given integer\
+  that can be created by flipping one bit
 
 #### data structures
 
