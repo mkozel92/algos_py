@@ -46,18 +46,3 @@ class LinearProbedHashTable(object):
                 return
         return self.values[i]
 
-    def delete(self, key: Any) -> Any:
-        """
-        deletes key value pair associated with given key
-        complexity O(N)
-        basically constant if table is at most half full
-        :param key: key
-        """
-        i = abs(hash(key) % self.size)
-        original_i = i
-        while self.keys[i] is not None and self.keys[i] != key:
-            i = (i + 1) % self.size
-            if i == original_i:
-                return
-        self.values[i] = None
-        self.keys[i] = None

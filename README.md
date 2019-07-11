@@ -22,7 +22,17 @@ Implementation of common algorithms and data structures in python
   * _run_length_compression_
   * _huffman_compression_
 * [Data structures](#data-structures)
-
+  * _binary_heap_
+  * _bst_symbol_table_
+  * _chained_hash_table_
+  * _linear_probed_hash_table_
+  * _linked_list_queue_
+  * _linked_list_stack_
+  * _r_way_trie_
+  * _red_black_tree_
+  * _resizing_array_stack_
+  * _ternary_search_trie_
+  
 #### Binary tree algos
 
 1. _binary_tree_  
@@ -42,7 +52,7 @@ O(log N) insertion and O(log N search)
 Uses DFS and has O(N) complexity
 
 1. _count_from_range_  
-function to count elements of tree that are lower than given element, higher then given elemtnt \
+function to count elements of tree that are lower than given element, higher then given element \
 of fall in given rage. All are recursive algos with O(log N) complexity.
 This algos assume that each node keep size of its subtree
 
@@ -87,50 +97,52 @@ This algos assume that each node keep size of its subtree
 
 #### data structures
 
-##### 1. binary_heap
+1. _binary_heap_  
+  implementation of binary heap using an array of fixed size. \
+  O(log N) insertion, deletion and search
 
-implementation of binary heap using an array of fixed size. \
-O(log N) insertion, deletion and search
+1. _bst_symbol_table_  
+  symbol table (holds key, value pairs) implemented using binary tree. \
+  O(N) deletion, search and insertion as balance is not ensured. \
+  O(log N) deletion, search and insertion if the tree is balanced \
+  but Hibbard deletion is not symmetric and messes up the balance
 
-##### 2. bst_symbol_table
+1. _chained_hash_table_  
+  hash table implementation using separate chaining. \
+  O(N/M) insertion, deletion and search. \
+  N/M is num_of_elements/size_of_array = average_list length
 
-symbol table (holds key, value pairs) implemented using binary tree. \
-O(N) deletion, search and insertion as balance is not ensured. \
-O(log N) deletion, search and insertion if the tree is balanced \
-but Hibbard deletion is not symmetric and messes up the balance
+1. _linear_probed_hash_table_  
+  hash table implemented using linear probing. \
+  O(N) insert and search but basically O(1) if the table is max half full
 
-##### 3. chained_hash_table
+1. _linked_list_queue_  
+  simple implementation of a queue using a linked list. \
+  O(1) enqueue, dequeue and peek
 
-hash table implementation using separate chaining. \
-O(N/M) insertion, deletion and search. \
-N/M is num_of_elements/size_of_array = average_list length
+1. _linked_list_stack_  
+  simple implementation of a stack using a linked list. \
+  O(1) push, pop, peek
 
-##### 4. linear_probed_hash_table
+1. _r_way_trie_  
+  implementation of a trie
+  O(k) put and get where k is length of key
+    
 
-hash table implemented using linear probing. \
-O(N) insert and search but basically O(1) if the table is max half full
+1. _red_black_tree_  
+  red black binary tree. Inserting of new elements keeps the tree balanced. \
+  O(log N) search, insert 
 
-##### 5. linked_list_queue
+1. _resizing_array_stack_  
+  stack implemented using resizing array \
+  amortized constant push and pop. \
+  O(N) for if the pop or push resize underlying array
 
-simple implementation of a queue using a linked list. \
-O(1) enqueue, dequeue and peek
-
-##### 6. linked_list_stack
-
-simple implementation of a stack using a linked list. \
-O(1) push, pop, peek
-
-##### 7. red_black_tree
-
-red black binary tree. Inserting of new elements keeps the tree balanced. \
-O (log N) search, insert 
-
-##### 8. resizing_array_stack
-
-stack implemented using resizing array \
-amortized constant push and pop. \
-O(N) for if the pop or push resize underlying array
-
+1. _ternary_search_trie_  
+  implementation of ternary trie. \
+  it has same performance as r_way trie but is more memory efficient \
+  because it does not hold tons of empty links
+  
 #### dynamic connectivity
 
 keeps track of connected components \
