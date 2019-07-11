@@ -32,7 +32,11 @@ Implementation of common algorithms and data structures in python
   * _red_black_tree_
   * _resizing_array_stack_
   * _ternary_search_trie_
-  
+* [Dynamic connectivity](#dynamic-connectivity)
+  * _quick_find_
+  * _quick_union_
+  * _weighted_quick_union_
+
 #### Binary tree algos
 
 1. _binary_tree_  
@@ -150,18 +154,20 @@ Union(p, q) - connects two elements \
 connected(p, q) - checks if elements are connected \
 
 
-##### 1. quick_find
-O(N) union\
-O(1) connected
+1. _quick_find_  
+  O(N) union\
+  O(1) connected
 
-##### 2. quick_union
-O(N) union\
-O(N) connected
+1. _quick_union_  
+  O(N) union\
+  O(N) connected
 
-##### 2. weighted_quick_union
-O(log N) union\
-O(log N) connected
-
+1. _weighted_quick_union_
+  O(log N) union\
+  O(log N) connected\
+  But those are basically constant because average case complexity \
+  grows proportionally to inverse Ackermann function = does not grow at all 
+    
 #### graphs
 
 ##### 1. adjacency_list_graph
