@@ -38,6 +38,7 @@ Implementation of common algorithms and data structures in python
   * _weighted_quick_union_
 * [Dynamic programming](#dynamic-programming)
   * _coins_
+  * _longest_common_subsequence_
   * _max_independent_set_
   * _triple_step_
 
