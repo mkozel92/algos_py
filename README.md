@@ -41,6 +41,10 @@ Implementation of common algorithms and data structures in python
   * _longest_common_subsequence_
   * _max_independent_set_
   * _triple_step_
+* [Graphs](#graphs)
+  * [Shortest path](#shortest_path)
+    * _Bellmann_Ford_
+    * _Dijkstra_
 
 #### Binary tree algos
 
@@ -194,7 +198,22 @@ connected(p, q) - checks if elements are connected \
   complexity O(MN)...choices of steps * num of steps to climb
     
     
+
 #### graphs
+
+##### shortest path
+
+1. _Bellman_Ford_  
+  Bellman Ford shortest path algo. \
+  relaxes every edge V times. \
+  Works with cyclic graphs with negative edges and can detect negative cycles. \
+  complexity O(EV)
+
+1. _Dijkstra_  
+  Dijkstra shortest path algo. \
+  works for cyclic graphs with no negative edges. \
+  complexity O(E log V)
+  
 
 ##### 1. adjacency_list_graph
 

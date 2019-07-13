@@ -12,12 +12,13 @@ def relax(edge: DirectedEdge, mh: BinaryHeap, distances: list, edge_to: list):
     :param distances: list of current best distances to every vertex
     :param edge_to: list keeping track of paths to vertices
     """
+
     from_ = edge.from_vertex()
     to_ = edge.to_vertex()
+
     if distances[from_] + edge.weight < distances[to_]:
         distances[to_] = distances[from_] + edge.weight
         edge_to[to_] = edge
-        # TODO: update mh if same key is inserted
         mh.insert((distances[to_], to_))
 
 
@@ -32,10 +33,14 @@ def dijkstra(a_graph: WeightedDigraph, distances: list, edge_to: list):
     """
     mh = BinaryHeap()
     mh.insert((0, 0))
+    visited = [False] * len(distances)
 
     while not mh.is_empty():
         distance, vertex = mh.remove()
+        if visited[vertex]:
+            continue
         for edge in a_graph.adj(vertex):
             relax(edge, mh, distances, edge_to)
+        visited[vertex] = True
 
 

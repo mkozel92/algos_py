@@ -1,10 +1,10 @@
 import unittest
 
 from graphs.adjacency_list_weighted_digraph import ALWDigraph
-from graphs.dijkstra import dijkstra
+from graphs.shortest_path.Bellman_Ford import bellman_ford
 
 
-class TestDijkstra(unittest.TestCase):
+class TestBF(unittest.TestCase):
 
     def setUp(self) -> None:
         self.g = ALWDigraph(10)
@@ -16,9 +16,9 @@ class TestDijkstra(unittest.TestCase):
         self.g.add_edge(3, 9, 1)
         self.g.add_edge(0, 9, 13)
 
-    def test_dijkstr(self):
+    def test_bf(self):
         dists = [0.0] + [float('Inf')] * 9
         e_from = [-1] * 10
 
-        dijkstra(self.g, dists, e_from)
+        bellman_ford(self.g, dists, e_from)
         self.assertEqual(dists, [0, 10, 10, 11, float('Inf'), 10, float('Inf'), float('Inf'), float('Inf'), 12])
