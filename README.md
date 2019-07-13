@@ -36,6 +36,10 @@ Implementation of common algorithms and data structures in python
   * _quick_find_
   * _quick_union_
   * _weighted_quick_union_
+* [Dynamic programming](#dynamic-programming)
+  * _coins_
+  * _max_independent_set_
+  * _triple_step_
 
 #### Binary tree algos
 
@@ -167,6 +171,23 @@ connected(p, q) - checks if elements are connected \
   O(log N) connected\
   But those are basically constant because average case complexity \
   grows proportionally to inverse Ackermann function = does not grow at all 
+    
+#### dynamic programming
+
+1. _coins_  
+  count all the different ways to get given change using given coins
+  complexity O(MN) ..num_coins * change to get
+  
+1. _max_independent_set_  
+  get sum of elements of max independent set. \
+  Independent set is subset of a list such that no elements in this set \
+  where consecutive in the original list
+  complexity O(N)
+  
+1. _triple_step_  
+  count ways to go up the stair using 1,2, or 3 steps at time
+  complexity O(MN)...choices of steps * num of steps to climb
+    
     
 #### graphs
 
