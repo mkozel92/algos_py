@@ -178,6 +178,10 @@ connected(p, q) - checks if elements are connected \
   count all the different ways to get given change using given coins
   complexity O(MN) ..num_coins * change to get
   
+1. _longest_common_subsequence_  
+  return length of longest common subsequence \
+  complexity O(MN)
+  
 1. _max_independent_set_  
   get sum of elements of max independent set. \
   Independent set is subset of a list such that no elements in this set \
