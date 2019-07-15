@@ -1,6 +1,5 @@
 from data_structures.data_structure_interfaces import Stack
 from data_structures.linked_list_stack import LinkedListStack
-from graphs.adjacency_list_digraph import ALDigraph
 from graphs.graph_interface import Digraph
 
 

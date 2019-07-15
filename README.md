@@ -45,7 +45,20 @@ Implementation of common algorithms and data structures in python
   * [Shortest path](#shortest_path)
     * _Bellmann_Ford_
     * _Dijkstra_
-
+  * _adjacency_list_digraph_
+  * _adjacency_list_graph_
+  * _adjacency_list_weighted_digraph_
+  * _adjacency_list_weighted_graph_
+  * _breadth_first_search_
+  * _build_order_
+  * _connected_components_
+  * _depth_first_search_
+  * _kruskal_algorithm_
+  * _prim_algorithm_
+  * _strong_components_
+  * _topological_sort_
+  
+  
 #### Binary tree algos
 
 - _binary_tree_  
@@ -213,33 +226,74 @@ connected(p, q) - checks if elements are connected \
     works for cyclic graphs with no negative edges. \
     complexity O(E log V)
   
+- _adjacency_list_digraph_  
+  Directed graph represented by adjacency list. \
+  O(1) add_edge \
+  O(1) return adjacent vertices for given vertex\
+  space complexity E + V
 
-##### 1. adjacency_list_graph
+- _adjacency_list_graph_  
+  graph represented by adjacency list. \
+  O(1) add_edge \
+  O(1) return adjacent vertices for given vertex\
+  space complexity E + V
 
-graph represented by adjacency list. \
-O(1) add_edge \
-O(1) return adjacent vertices for given vertex\
-space complexity E + V
+- _adjacency_list_weighted_digraph_  
+  Directed weighted graph represented by adjacency list. \
+  O(1) add_edge \
+  O(1) return adjacent vertices for given vertex\
+  space complexity E + V
 
-##### 2. adjacency_matrix_graph
+- _adjacency_list_weighted_graph_  
+  weighted graph represented by adjacency list. \
+  O(1) add_edge \
+  O(1) return adjacent vertices for given vertex\
+  space complexity E + V
 
-graph represented by adjacency matrix. \
-O(1) add_edge \
-O(N) return adjacent vertices for given vertex\
-space complexity V^2
+- _adjacency_matrix_graph_  
+  graph represented by adjacency matrix. \
+  O(1) add_edge \
+  O(N) return adjacent vertices for given vertex\
+  space complexity V^2
 
-##### 3. breadth_first_search
+- _breadth_first_search_  
+  just BFS, O(E + V)
 
-just BFS, O(E + V)
+- _build_order_  
+  Get possible build order given list of projects and their dependencies \
+  Represent as a graph and use top sort. \
+  Complexity O(N)
 
-##### 4. depth_first_search
+- _connected_components_  
+  get connected components of given undirected graph. \
+  complexity O(N)
 
-just DFS, O(E + V)
+- _depth_first_search_  
+  recursive and iterative implementations of  DFS, \
+  O(E + V)
 
-##### 5. connected_components
-
-check if there is a path between two vertices in O(1) time. \
-O(E + V) to build CC object using DFS
+- _kruskal_  
+  Build MST of given graph. \
+  Try to add edges from shortest to longest to mst \ 
+  but only add those that would not create cycle 
+  ... this can be checked in constant time using quick union DS. 
+  complexity (E log E) ..dominated by sorting edges
+  
+- _prim_  
+  Build MST of given graph. \
+  iteratively add shortest edge that connects current mst with a \
+  vertex outside of mst.
+  Vertices outside of MST are kept in min heap. \
+  complexity O(E log E).
+  
+- _strong_components_  
+  get strong components of a directed graph. \
+  Complexity O(E + V)
+  
+- _topological_sort_  
+  topologically sort given acyclic graph. \
+  Complexity O(E + V)
+  
 
 #### recursion
 
