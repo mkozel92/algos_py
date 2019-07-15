@@ -61,7 +61,8 @@ Implementation of common algorithms and data structures in python
   * _prim_algorithm_
   * _strong_components_
   * _topological_sort_
-  
+* [Linear programming](#linear-programming)
+  * _simplex_
   
 #### Binary tree algos
 
@@ -309,6 +310,11 @@ connected(p, q) - checks if elements are connected \
   topologically sort given acyclic graph. \
   Complexity O(E + V)
   
+
+#### linear programming
+
+- _simplex_  
+  Simplex algo to solve linear programming problems
 
 #### recursion
 

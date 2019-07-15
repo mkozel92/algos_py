@@ -3,7 +3,7 @@ def pivot(simplex_matrix: list, pivot_row: int, pivot_column: int):
     perform pivot operation
     1. divide pivot row by value of coefficient in pivot column and pivot row.
        variable on this place will then have coefficient 1
-    2. express this variable variable by moving all other variables to the right side of equation
+    2. express this variable by moving all other variables to the right side of equation
        represented by pivot row and substitute this variable to other rows.
        -> this will zero out pivot column and rescales other coefficients
     :param simplex_matrix: simplex matrix
