@@ -53,6 +53,10 @@ Implementation of common algorithms and data structures in python
   * _build_order_
   * _connected_components_
   * _depth_first_search_
+  * _graph_classification_algos_
+    * _is_bipartite_
+    * _has_cycle_ 
+    * _has_euler_tour_
   * _kruskal_algorithm_
   * _prim_algorithm_
   * _strong_components_
@@ -271,6 +275,17 @@ connected(p, q) - checks if elements are connected \
 - _depth_first_search_  
   recursive and iterative implementations of  DFS, \
   O(E + V)
+
+- _graph_classification_algos_  
+  - _is_bipartite_  
+    check if graph is bipartite using DFS \
+    Complexity O(E + V)
+  - _has_cycle_  
+    Check if given graph has a cycle using DFS \
+    Complexity O(E + V)
+  - _has_euler_tour_  
+    check if graph has an euler tour \
+    Complecity O(V)
 
 - _kruskal_  
   Build MST of given graph. \
